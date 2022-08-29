@@ -1,10 +1,12 @@
 # REACT BASE CONFIGURATION PROJECT
 
 ## Overview
+
 - Language: Typescript
 - Package manager: Yarn
 
 ## Package
+
 - tailwindcss
 - postcss
 - autoprefixer
@@ -19,3 +21,4 @@
 - @craco/craco
 - babel
 - classnames
+- prettier
