@@ -1,10 +1,8 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from "react";
 interface Props {
-    children: ReactNode
+  children: ReactNode;
 }
 
-export const MainLayout:React.FC<Props> = ({children}) => {
-  return (
-    <div>{children}</div>
-  )
-}
+export const MainLayout: React.FC<Props> = ({ children }) => {
+  return <div>{children}</div>;
+};

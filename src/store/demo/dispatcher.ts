@@ -1,8 +1,9 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
-const getFeatureFunction = () => { return [] }
+const getFeatureFunction = () => {
+  return [];
+};
 
-export const getFunction = createAsyncThunk(
-    'feature/get',
-    () => getFeatureFunction(),
+export const getFunction = createAsyncThunk("feature/get", () =>
+  getFeatureFunction()
 );
