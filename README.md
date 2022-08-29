@@ -18,3 +18,4 @@
 - react-topbar-progress-indicator
 - @craco/craco
 - babel
+- classnames
