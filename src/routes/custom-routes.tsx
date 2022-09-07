@@ -30,7 +30,7 @@ export const CustomRoute: GlobalTypes.FCChildren = ({ children }) => {
   return (
     <>
       {progress && <TopBarProgress />}
-      <Routes>{children}</Routes>
+      <>{children}</>
     </>
   );
 };

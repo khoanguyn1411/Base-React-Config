@@ -1,48 +1,24 @@
 import { GlobalTypes } from "@/global";
-import { Fragment } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import { MainLayout } from "../components/layouts";
-import { routesConfigs } from "./config";
+import { AuthRequiredGuard } from "@/guard";
+import { dashboardRoutes } from "@/pages/dashboard-page/routes";
+import { loginRoutes } from "@/pages/login-page/routes";
+import { FC } from "react";
+import { BrowserRouter, RouteObject, useRoutes } from "react-router-dom";
 import { CustomRoute } from "./custom-routes";
 
+const routes: RouteObject[] = [
+  {
+    element: <AuthRequiredGuard />,
+    children: [...dashboardRoutes, ...loginRoutes],
+  },
+];
+
+const RootComponent: FC = () => useRoutes(routes);
 export const RootRoutes: GlobalTypes.FC = () => {
   return (
     <BrowserRouter>
       <CustomRoute>
-        {routesConfigs.privateRoutes.map((route, index) => {
-          const Component = route.component;
-          const Layout: any =
-            route.layout !== null ? route.layout || MainLayout : Fragment;
-
-          return (
-            <Route
-              path={route.path}
-              key={`privateRoute_${index}`}
-              element={
-                <Layout>
-                  <Component />
-                </Layout>
-              }
-            />
-          );
-        })}
-
-        {routesConfigs.publicRoutes.map((route, index) => {
-          const Component = route.component;
-          const Layout: any =
-            route.layout !== null ? route.layout || MainLayout : Fragment;
-          return (
-            <Route
-              path={route.path}
-              key={`publicRoute_${index}`}
-              element={
-                <Layout>
-                  <Component />
-                </Layout>
-              }
-            />
-          );
-        })}
+        <RootComponent />
       </CustomRoute>
     </BrowserRouter>
   );
