@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { DashboardPage } from "@/pages";
+import { DashboardPage, LoginPage } from "@/pages";
 
 interface IRoutes {
   path: string;
@@ -15,6 +15,13 @@ const privateRoutes: readonly IRoutes[] = [
     component: DashboardPage,
     pageTitle: "Dashboard",
     pageKey: "dashboard",
+  },
+
+  {
+    path: "/login",
+    component: LoginPage,
+    pageTitle: "Login",
+    pageKey: "login",
   },
 ];
 

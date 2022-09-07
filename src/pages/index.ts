@@ -1,1 +1,2 @@
-export * from "./dashboard";
+export * from "./dashboard-page";
+export * from "./login-page";
