@@ -1,0 +1,4 @@
+body * {
+    text-rendering: optimizeSpeed;
+    box-sizing: border-box;
+}
