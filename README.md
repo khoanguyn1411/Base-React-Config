@@ -3,7 +3,7 @@
 ## Overview
 
 - Language: Typescript
-- Package manager: Yarn
+- Package manager: npm
 
 ## Package
 
@@ -22,3 +22,5 @@
 - babel
 - classnames
 - prettier
+- yup
+- react-hook-form

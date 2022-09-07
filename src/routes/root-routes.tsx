@@ -1,5 +1,6 @@
 import { GlobalTypes } from "@/global";
 import { AuthRequiredGuard } from "@/guard";
+import { NotFoundPage } from "@/pages";
 import { dashboardRoutes } from "@/pages/dashboard-page/routes";
 import { loginRoutes } from "@/pages/login-page/routes";
 import { FC } from "react";
@@ -12,6 +13,7 @@ const routes: RouteObject[] = [
     children: [...loginRoutes],
   },
   { children: [...dashboardRoutes] },
+  { path: "*", element: <NotFoundPage /> },
 ];
 
 const RootComponent: FC = () => useRoutes(routes);
