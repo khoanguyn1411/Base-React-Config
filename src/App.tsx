@@ -2,8 +2,9 @@ import { RootRoutes } from "@/routes";
 import { store } from "@/store";
 import { Suspense } from "react";
 import { Provider } from "react-redux";
+import { GlobalTypes } from "./global";
 
-function App() {
+const App: GlobalTypes.FC = () => {
   return (
     <Provider store={store}>
       <Suspense
@@ -13,6 +14,6 @@ function App() {
       </Suspense>
     </Provider>
   );
-}
+};
 
 export default App;
