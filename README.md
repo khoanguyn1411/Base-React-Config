@@ -24,3 +24,5 @@
 - prettier
 - yup
 - react-hook-form
+- customize-cra
+- react-app-rewired
