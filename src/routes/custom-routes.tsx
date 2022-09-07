@@ -1,4 +1,5 @@
-import { ReactNode, useEffect, useState } from "react";
+import { GlobalTypes } from "@/global";
+import { useEffect, useState } from "react";
 import { Routes, useLocation } from "react-router-dom";
 import TopBarProgress from "react-topbar-progress-indicator";
 
@@ -10,10 +11,7 @@ TopBarProgress.config({
   shadowBlur: 5,
 });
 
-type TProps = {
-  children: ReactNode | JSX.Element;
-};
-export const CustomRoute: React.FC<TProps> = ({ children }) => {
+export const CustomRoute: GlobalTypes.FCChildren = ({ children }) => {
   const [progress, setProgress] = useState(false);
   const [prevLoc, setPrevLoc] = useState("");
   const location = useLocation();
