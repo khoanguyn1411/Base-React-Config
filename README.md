@@ -12,13 +12,9 @@
 - autoprefixer
 - sass
 - react-router-dom
-- @emotion/react
-- @emotion/styled
 - axios
-- @reduxjs/toolkit
 - react-redux
 - react-topbar-progress-indicator
-- @craco/craco
 - babel
 - classnames
 - prettier
@@ -26,3 +22,6 @@
 - react-hook-form
 - customize-cra
 - react-app-rewired
+- @emotion/react
+- @emotion/styled
+- @reduxjs/toolkit
