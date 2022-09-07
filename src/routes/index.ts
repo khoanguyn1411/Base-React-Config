@@ -1,3 +1,2 @@
-export * from './custom-routes'
-export * from './root-routes'
-export * from './config'
+export * from "./custom-routes";
+export * from "./root-routes";

@@ -9,8 +9,9 @@ import { CustomRoute } from "./custom-routes";
 const routes: RouteObject[] = [
   {
     element: <AuthRequiredGuard />,
-    children: [...dashboardRoutes, ...loginRoutes],
+    children: [...loginRoutes],
   },
+  { children: [...dashboardRoutes] },
 ];
 
 const RootComponent: FC = () => useRoutes(routes);
